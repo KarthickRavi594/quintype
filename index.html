@@ -1,0 +1,267 @@
+<html>
+
+<head>
+	<title>
+		Quintype
+	</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+	function myFunction() {
+		var popup = document.getElementById("myPopup");
+		var lay = document.getElementById("layer");
+		popup.classList.toggle("show");
+		lay.classList.toggle("hide");
+	}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<style>
+	.popup {
+		position: relative;
+		display: inline-block;
+		cursor: pointer;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	.popup .dialog {
+		visibility: hidden;
+	}
+
+	.popup .dialog::after {
+		content: "";
+	}
+
+	.popup .show {
+		visibility: visible;
+		-webkit-animation: fadeIn 1s;
+		animation: fadeIn 1s;
+	}
+
+	.dialog {
+		/* padding: 4%; */
+		position: relative;
+		top: 15%;
+		left: 15%;
+		height: 65%;
+		width: 70%;
+		border: 1px solid #ccc;
+	}
+
+	.dialogContent {
+		padding: 3%;
+	}
+
+	.dialogContent p {
+		padding: 5%;
+	}
+
+	.header {
+		background-color: #0165a7;
+		height: 15%;
+		width: 100%;
+		display: inline-block;
+	}
+
+	.headerContent {
+		float: left;
+		color: #fff;
+		font-weight: 700;
+	}
+
+	.layer {
+		padding: 25px;
+		visibility: visible;
+	}
+
+	.layer::after {
+		visibility: hidden;
+	}
+
+	.layer .hide {
+		visibility: hidden;
+	}
+
+	.upperLayer {
+		background-color: #eeedef;
+		height: 25%;
+	}
+
+	.loweLayer {
+		height: 75%;
+	}
+
+	.leftSide {
+		width: 40%;
+	}
+
+	.rightSide {
+		float: right;
+		width: 60%;
+		justify-content: center;
+	}
+
+	.leftContent {
+		position: absolute;
+		left: 15%;
+		top: 20%;
+		height: 45%;
+		width: 25%;
+		float: right;
+		background-color: #d8d8d8;
+	}
+
+	.block {
+		background-color: #d8d8d8;
+		position: absolute;
+		margin-left: 5%;
+		margin-top: 18%;
+		height: 15%;
+		width: 15%;
+	}
+
+	.top {
+		padding-top: 15%;
+		padding-left: 25%;
+		float: left;
+	}
+
+	.Details {
+		height: 50%;
+		width: 30%;
+		float: left;
+	}
+
+	@media only screen and (max-width: 600px) {
+		.leftContent {
+			display: none;
+		}
+		.rightSide {
+			float: left;
+		}
+		.Details {
+			display: inline-block;
+			width: 100%;
+			height: 20%;
+		}
+		.block {
+			background-color: #d8d8d8;
+			float: left;
+			margin: 5%;
+		}
+		.top {
+			margin: 0;
+			margin-left: 35%;
+			width: 100%;
+		}
+		.block .top {
+			display: inline;
+		}
+		.headerContent {
+			width: 80%;
+		}
+	}
+
+	@media only screen and (min-width: 600px) and (max-width: 1024px) {
+		.leftContent {
+			float: left;
+			left: 10%;
+			top: 10%;
+			width: 35%;
+		}
+		.loweLayer {
+			display: inline-block;
+			width: 100%;
+			height: 20%;
+		}
+		.rightSide {
+			position: absolute;
+			left: 45%;
+			top: 5%;
+			width: 50%;
+		}
+		.Details {
+			display: inline-block;
+			width: 100%;
+			height: 30%;
+		}
+		.block {
+			background-color: #d8d8d8;
+			float: left;
+			margin-top: 13%;
+			height: 15%
+		}
+		.block .top {
+			display: inline;
+		}
+		.headerContent {
+			width: 80%;
+		}
+	}
+</style>
+
+<body>
+	<div class="layer" id="layer">
+		<div class="upperLayer">
+			<!-- empty -->
+		</div>
+		<div class="lowerLayer">
+			<div class="leftSide">
+				<div class="leftContent">
+
+				</div>
+			</div>
+			<div class="rightSide">
+				<div class="Details">
+					<div class="top">
+						The real reasons why making money with online media is hard
+					</div>
+					<div class="block">
+
+					</div>
+				</div>
+				<div class="Details">
+					<div class="top">
+						How Motherly Uses Personalization to Create Engagement
+					</div>
+					<div class="block">
+
+					</div>
+				</div>
+				<div class="Details">
+					<div class="top">
+						Fixing email overload, and now chat overload, for content teams
+					</div>
+					<div class="block">
+
+					</div>
+				</div>
+			</div>
+			<!-- Lower Part -->
+		</div>
+	</div>
+	<div class="popup" onclick="myFunction()">Click me to toggle the popup!
+		<div class="dialog" id="myPopup">
+			<div class="header">
+				<div class="headerContent" style="float:left;padding:2%">
+					Ad Blockers: Setback or Spark for Innovation
+				</div>
+				<div class="closeButton" style="float: right;padding-right:3%;padding-top: 1%;">
+					<i class="fa fa-close" style="color:#fff;font-size:24px"></i>
+				</div>
+			</div>
+			<div class="dialogContent">
+				<p>In 2015, the industry lost a staggering $22 billion in revenue due to ad blockers. Publishers are lamenting their losses.
+					But if users are annoyed enough at ads that they want to block them, shouldn’t advertisers be doing something different?</p>
+				<p>This rough downturn could be the spark the industry needs to disrupt the old paradigms and create innovative ads for
+					a new digital landscape.
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
