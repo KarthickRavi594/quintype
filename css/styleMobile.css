@@ -1,0 +1,29 @@
+@media only screen and (max-width: 600px) {
+    .leftContent {
+        display: none;
+    }
+    .rightSide {
+        float: left;
+    }
+    .Details {
+        display: inline-block;
+        width: 100%;
+        height: 20%;
+    }
+    .block {
+        background-color: #d8d8d8;
+        float: left;
+        margin: 5%;
+    }
+    .top {
+        margin: 0;
+        margin-left: 35%;
+        width: 100%;
+    }
+    .block .top {
+        display: inline;
+    }
+    .headerContent {
+        width: 80%;
+    }
+}
